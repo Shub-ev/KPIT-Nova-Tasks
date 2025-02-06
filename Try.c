@@ -7,5 +7,5 @@ Date
 
 int main()
 {
-
+    int a = b = c = 10;
 }
