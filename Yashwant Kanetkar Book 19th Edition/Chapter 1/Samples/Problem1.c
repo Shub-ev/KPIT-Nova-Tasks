@@ -1,5 +1,9 @@
 /* Problem-1 */
-/* Author Shubham Date 31/01/2025*/
+/* 
+Author: Shubham 
+Date 31/01/2025
+*/
+
 /*
     Ramesh’s basic salary is input through the keyboard. His dearness
     allowance is 40% of basic salary, and house rent allowance is 20% of
