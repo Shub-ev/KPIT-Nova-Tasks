@@ -1,5 +1,9 @@
 /* Problem-2 */
-/* Author Shubham Date */
+/* 
+Author: Shubham 
+Date: 31/01/2025 
+*/
+
 /*
     The distance between two cities (in kilometers) is input through the
     keyboard. Write a program to convert and print this distance in meters,
