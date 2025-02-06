@@ -1,5 +1,8 @@
 /* Problem-3 */
-/* Author Shubham Date */
+/* 
+Author :Shubham 
+Date: 31/01/2025 
+*/
 /*
     If the marks obtained by a student in five different subjects are input
     through the keyboard, write a program to find out the aggregate marks
