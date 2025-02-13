@@ -1,7 +1,7 @@
 /* AS002 */
 /*
-Author: Shubham
-Date: 29/01/2025
+    Author: Shubham Gharage
+    Date: 29/01/2025
 */
 
 /*
@@ -15,45 +15,53 @@ Date: 29/01/2025
 #include<stdlib.h>  // to use malloc
 #define max(a,b) ((a) > (b) ? (a) : (b))    // macro to get the max value
 
-int findMaxConsicutive(int* arr, int n){
-    int maxCount = 0;
-    int occurance = 0;
+int findMaxConsecutive(int* arr, int n) {
+    if (n == 0) return 0;  // Handle empty array case
 
-    for(int i = 0; i < n; i++){
-        if(arr[i] == 1) occurance++;
-        else{
-            maxCount = max(maxCount, occurance);
-            occurance = 0;
+    int maxCount = 0;
+    int occurrence = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == 1) {
+            occurrence++;
+        } else {
+            maxCount = max(maxCount, occurrence);
+            occurrence = 0;
         }
     }
 
-    return max(maxCount, occurance);
+    return max(maxCount, occurrence);
 }
 
-int main()
-{
-    int n, maxConsicutive;
+int main() {
+    int n, maxConsecutive;
     int* arr;
 
     printf("Enter size of Binary Array: ");
     scanf("%d", &n);
 
-    // dynamic memory allocation for array
-    arr = (int*) malloc(n * sizeof(int));
-    if(arr == NULL){
-        printf("Memory allocation failed!");
-        return(1);
+    if (n <= 0) {
+        printf("Invalid array size.\n");
+        return 1;
+    }
+
+    // Dynamic memory allocation for array
+    arr = (int*)malloc(n * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
     }
 
     printf("Enter Array Elements: ");
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    //function call
-    maxConsicutive = findMaxConsicutive(arr, n);
+    // Function call
+    maxConsecutive = findMaxConsecutive(arr, n);
 
-    printf("Max Consecutive 1's: %d", maxConsicutive);
+    printf("Max Consecutive 1's: %d\n", maxConsecutive);
 
     free(arr);
+    return 0;
 }
